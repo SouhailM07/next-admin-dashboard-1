@@ -21,7 +21,7 @@ const config = {
       colors: {
         // custom
         mainPages: "#fafafa",
-        sidebarTitles: "#9da4b0",
+        sidebarTitles: "#4D5A5B",
         sidebarLinks: "#374152",
         // shadcn-ui
         border: "hsl(var(--border))",
