@@ -1,4 +1,4 @@
 import "./mycontainer.css";
 export default function MyContainer() {
-  return <main className="border-2 border-black w-full">MyContainer</main>;
+  return <main className=" bg-mainPages w-full">MyContainer</main>;
 }
