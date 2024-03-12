@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply flex min-h-screen;
+  @apply flex min-h-screen bg-mainPages;
 }

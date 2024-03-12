@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 #MySidebar {
-  @apply pl-[1.5rem] py-[0.7rem] max-h-screen w-[18rem] overflow-y-auto;
+  @apply pl-[1.5rem]  max-h-screen w-[18rem] bg-white drop-shadow-xl;
 }
 
-#MySidebar section, #MySidebar ul {
-    @apply space-y-[0.7rem]
+#MySidebar section,
+#MySidebar ul {
+  @apply space-y-[1.2rem];
 }

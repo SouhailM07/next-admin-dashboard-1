@@ -23,6 +23,7 @@ const config = {
         mainPages: "#fafafa",
         sidebarTitles: "#4D5A5B",
         sidebarLinks: "#374152",
+        primaryCyan: "#02c8d6",
         // shadcn-ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
