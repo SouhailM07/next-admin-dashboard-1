@@ -12,13 +12,10 @@ export default function SettingsBtn() {
     <>
       <div
         role="button"
+        aria-label="settings button"
         className={`themeIndex-${themeIndex} text-[1.7rem] w-[2.5rem] h-[2.5rem] grid place-items-center rounded-full fixed bottom-[1rem] right-[1.5rem] hover:rotate-[120deg] transition-all duration-200 text-white`}
       >
-        <FontAwesomeIcon
-          icon={faGear}
-          className="h-[1.5rem] w-[1.5rem]"
-          aria-label="settings btn"
-        />
+        <FontAwesomeIcon icon={faGear} className="h-[1.5rem] w-[1.5rem]" />
       </div>
     </>
   );
