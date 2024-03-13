@@ -8,15 +8,26 @@ import { arrOfSidebarLinks } from "@/arrays";
 import { ScrollArea } from "@/components/ui/scroll-area";
 // assets
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function MySidebar() {
-  const { toggleSidebar } = toggleStore((state) => state);
+  const { toggleSidebar, editToggleSidebar } = toggleStore((state) => state);
+  // ! handlers
+  const handleToggle = () => editToggleSidebar();
   return (
     <>
       {toggleSidebar && (
         <aside id="MySidebar">
           <ScrollArea className=" h-screen py-[0.7rem]">
-            <h1 className="font-bold mb-[2rem]">Shoppy</h1>
+            <article className="flex items-center justify-between pr-[1rem] mb-[2rem]">
+              <h1 className="font-bold ">Shoppy</h1>
+              <FontAwesomeIcon
+                icon={faCircleXmark}
+                role="button"
+                className="text-primaryCyan lg:hidden "
+                onClick={handleToggle}
+              />
+            </article>
             <article className="space-y-[1rem] text-[0.9rem]">
               {arrOfSidebarLinks.map((e, i) => {
                 return (

@@ -26,13 +26,34 @@ export default function Navbar() {
               icon={faBars}
               className="faIcon"
               onClick={handleToggle}
+              role="button"
+              aria-label="toggle sidebar"
             />
-            <FontAwesomeIcon icon={faMagnifyingGlass} className=" faIcon" />
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              className=" faIcon"
+              aria-label="search bar"
+            />
           </div>
           <div className="flex space-x-[2rem]">
-            <FontAwesomeIcon icon={faCartShopping} className=" faIcon" />
-            <FontAwesomeIcon icon={faMessage} className=" faIcon" />
-            <FontAwesomeIcon icon={faBell} className=" faIcon" />
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              className=" faIcon"
+              role="button"
+              aria-label="cart shopping"
+            />
+            <FontAwesomeIcon
+              icon={faMessage}
+              className=" faIcon"
+              role="button"
+              aria-label="chat"
+            />
+            <FontAwesomeIcon
+              icon={faBell}
+              className=" faIcon"
+              role="button"
+              aria-label="notification"
+            />
           </div>
         </nav>
       </header>
