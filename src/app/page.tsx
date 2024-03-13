@@ -1,5 +1,5 @@
 // components
-import { MyContainer } from "@/components";
+import { Ecommerce } from "@/components";
 export default function Home() {
-  return <MyContainer />;
+  return <Ecommerce />;
 }
