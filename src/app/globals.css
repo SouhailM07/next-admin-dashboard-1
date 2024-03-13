@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 nav .faIcon {
-  @apply h-[1.1rem] w-[1.1rem] text-primaryCyan cursor-pointer;
+  @apply h-[1.1rem] w-[1.1rem] cursor-pointer;
 }
 
 @layer base {

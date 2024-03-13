@@ -2,6 +2,7 @@
 import "./mysidebar.css";
 // zustand
 import toggleStore from "@/zustand/toggleStore";
+import themeStore from "@/zustand/themeStore";
 // hooks
 import { useState } from "react";
 // ! arrays
@@ -15,6 +16,7 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 export default function MySidebar() {
   const { toggleSidebar, editToggleSidebar } = toggleStore((state) => state);
   const [selectedLink, setSelectedLink] = useState({ bar: 0, link: 0 });
+  const { themeIndex } = themeStore((state) => state);
   // ! handlers
   const handleToggle = () => editToggleSidebar();
 
@@ -56,6 +58,11 @@ export default function MySidebar() {
                               onChange={() => {}}
                             />
                             <label
+                              className={` ${
+                                i == selectedLink.bar && i1 == selectedLink.link
+                                  ? `themeIndex-${themeIndex}`
+                                  : null
+                              }`}
                               htmlFor={e1.txt}
                               onClick={() => {
                                 setSelectedLink({ bar: i, link: i1 });

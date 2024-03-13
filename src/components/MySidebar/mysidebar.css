@@ -11,8 +11,8 @@
   @apply space-y-[1.2rem];
 }
 #MySidebar input[type="radio"] + label {
-  @apply space-x-[1rem] cursor-pointer w-[90%] p-[13px] rounded-md;
+  @apply space-x-[1rem] cursor-pointer w-[90%] h-[2.5rem] flex items-center px-[13px] rounded-md hover:bg-gray-300;
 }
 #MySidebar input[type="radio"]:checked + label {
-  @apply bg-primaryCyan text-white;
+  @apply text-white;
 }

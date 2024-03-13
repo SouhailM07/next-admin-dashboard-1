@@ -2,6 +2,7 @@
 import "./navbar.css";
 // zustand
 import toggleStore from "@/zustand/toggleStore";
+import themeStore from "@/zustand/themeStore";
 // assets
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,6 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
   const { editToggleSidebar } = toggleStore((state) => state);
+  const { themeIndex } = themeStore((state) => state);
   // ! handlers
   const handleToggle = () => {
     editToggleSidebar();
@@ -24,33 +26,33 @@ export default function Navbar() {
           <div className="flex items-center space-x-[2rem] ">
             <FontAwesomeIcon
               icon={faBars}
-              className="faIcon"
+              className={`faIcon themIndex__txt-${themeIndex}`}
               onClick={handleToggle}
               role="button"
               aria-label="toggle sidebar"
             />
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
-              className=" faIcon"
+              className={`faIcon themIndex__txt-${themeIndex}`}
               aria-label="search bar"
             />
           </div>
-          <div className="flex space-x-[2rem]">
+          <div className="flex space-x-[2rem] ">
             <FontAwesomeIcon
               icon={faCartShopping}
-              className=" faIcon"
+              className={`faIcon themIndex__txt-${themeIndex}`}
               role="button"
               aria-label="cart shopping"
             />
             <FontAwesomeIcon
               icon={faMessage}
-              className=" faIcon"
+              className={`faIcon themIndex__txt-${themeIndex}`}
               role="button"
               aria-label="chat"
             />
             <FontAwesomeIcon
               icon={faBell}
-              className=" faIcon"
+              className={`faIcon themIndex__txt-${themeIndex}`}
               role="button"
               aria-label="notification"
             />
