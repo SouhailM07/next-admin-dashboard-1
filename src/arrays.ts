@@ -1,4 +1,4 @@
-import { sidebarLinks } from "@/types";
+import { sidebarLinks, myBox } from "@/types";
 // assets
 import {
   faBagShopping,
@@ -15,6 +15,8 @@ import {
   faCoins,
   faSignal,
   faCaretUp,
+  faBox,
+  faRotate,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const arrOfSidebarLinks: sidebarLinks[] = [
@@ -50,5 +52,40 @@ export const arrOfSidebarLinks: sidebarLinks[] = [
       { img: faSignal, txt: "Color-Mapping", link: "" },
       { img: faCaretUp, txt: "Pyramid", link: "" },
     ],
+  },
+];
+
+export const arrOfBoxes: myBox[] = [
+  {
+    img: faUserGroup,
+    Bg: "bg-[#c5fafd]",
+    Color: "text-[#02c8d6]",
+    n: "39,354",
+    label: "Customers",
+    percent: "-4%",
+  },
+  {
+    img: faBox,
+    Bg: "bg-[#ffcb0f]",
+    Color: "text-[#ffffff]",
+    n: "4,396",
+    label: "Products",
+    percent: "+23%",
+  },
+  {
+    img: faSignal,
+    Bg: "bg-[#fff4e6]",
+    Color: "text-[#e36875]",
+    n: "423,39",
+    label: "Sales",
+    percent: "+38%",
+  },
+  {
+    img: faRotate,
+    Bg: "bg-[#ebfaf2]",
+    Color: "text-[#00c291]",
+    n: "39,354",
+    label: "Refunds",
+    percent: "-12%",
   },
 ];

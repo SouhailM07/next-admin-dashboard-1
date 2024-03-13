@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom */
 nav .faIcon {
   @apply h-[1.1rem] w-[1.1rem] cursor-pointer;
 }
-
+body {
+  @apply flex min-h-screen bg-mainPages;
+}
+/* Custom */
 @layer base {
   :root {
     --background: 0 0% 100%;

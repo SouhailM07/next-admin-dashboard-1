@@ -59,9 +59,9 @@ export default function MySidebar() {
                             />
                             <label
                               className={` ${
-                                i == selectedLink.bar && i1 == selectedLink.link
-                                  ? `themeIndex-${themeIndex}`
-                                  : null
+                                i == selectedLink.bar &&
+                                i1 == selectedLink.link &&
+                                `themeIndex-${themeIndex}`
                               }`}
                               htmlFor={e1.txt}
                               onClick={() => {

@@ -22,10 +22,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <MySidebar />
           <SettingsPanel />
-          <main className="w-full">
+          <div className="w-full">
             <Navbar />
             {children}
-          </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
