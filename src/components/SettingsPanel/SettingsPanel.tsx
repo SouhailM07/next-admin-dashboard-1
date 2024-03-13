@@ -2,6 +2,9 @@
 import "./settingspanel.css";
 // components
 import { SettingsBtn } from "@/components";
+// hooks
+import { useState } from "react";
+import { useTheme } from "next-themes";
 // zustand
 import themeStore from "@/zustand/themeStore";
 // shadcn-ui
@@ -18,9 +21,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function SettingsPanel() {
+  const { setTheme } = useTheme();
+  const [mode, setMode] = useState<boolean>(false);
   const themeOptions = [
-    { label: "Light", func: "" },
-    { label: "Dark", func: "" },
+    {
+      label: "Light",
+      func: () => {
+        setTheme("light");
+        setMode(false);
+      },
+    },
+    {
+      label: "Dark",
+      func: () => {
+        setTheme("dark");
+        setMode(true);
+      },
+    },
   ];
   const { themeIndex, editThemeIndex } = themeStore((state) => state);
   return (
@@ -35,13 +52,23 @@ export default function SettingsPanel() {
             <SheetTitle>Settings?</SheetTitle>
             <SheetDescription>
               <hr className="SettingsPanel__hr" />
-              <h1 className=" font-bold mb-[1rem]">Theme option</h1>
+              <h1 className=" font-bold mb-[1rem] dark:text-red-500 ">
+                Theme option
+              </h1>
               <ul role="list" className="space-y-[0.5rem]">
                 {themeOptions.map((e, i) => {
                   return (
                     <li role="listitem" key={i} className="space-x-[1rem]">
-                      <input type="radio" name="mode" id={e.label + i} />
-                      <label htmlFor={e.label + i}>{e.label}</label>
+                      <input
+                        type="radio"
+                        name="mode"
+                        id={e.label + i}
+                        checked={+mode == i}
+                        onChange={() => {}}
+                      />
+                      <label htmlFor={e.label + i} onClick={e.func}>
+                        {e.label}
+                      </label>
                     </li>
                   );
                 })}

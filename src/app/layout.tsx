@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 // components
+import { ThemeProvider } from "@/components/MyThemeProvider/MyThemeProvider";
 import { MySidebar, Navbar, SettingsPanel } from "@/components";
 
 export const metadata: Metadata = {
@@ -18,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MySidebar />
-        <SettingsPanel />
-        <main className="w-full">
-          <Navbar />
-          {children}
-        </main>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <MySidebar />
+          <SettingsPanel />
+          <main className="w-full">
+            <Navbar />
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
