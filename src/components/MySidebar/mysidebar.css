@@ -10,3 +10,9 @@
 #MySidebar ul {
   @apply space-y-[1.2rem];
 }
+#MySidebar input[type="radio"] + label {
+  @apply space-x-[1rem] cursor-pointer w-[90%] p-[13px] rounded-md;
+}
+#MySidebar input[type="radio"]:checked + label {
+  @apply bg-primaryCyan text-white;
+}

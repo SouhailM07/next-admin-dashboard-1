@@ -2,6 +2,8 @@
 import "./mysidebar.css";
 // zustand
 import toggleStore from "@/zustand/toggleStore";
+// hooks
+import { useState } from "react";
 // ! arrays
 import { arrOfSidebarLinks } from "@/arrays";
 // shadcn-ui
@@ -12,8 +14,10 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function MySidebar() {
   const { toggleSidebar, editToggleSidebar } = toggleStore((state) => state);
+  const [selectedLink, setSelectedLink] = useState({ bar: 0, link: 0 });
   // ! handlers
   const handleToggle = () => editToggleSidebar();
+
   return (
     <>
       {toggleSidebar && (
@@ -39,13 +43,30 @@ export default function MySidebar() {
                           <li
                             role="listitem"
                             key={i1}
-                            className="flex items-center space-x-[1rem] cursor-pointer"
+                            className="flex items-center  "
                           >
-                            <FontAwesomeIcon
-                              icon={e1.img}
-                              className="h-[1rem] w-[1rem]"
+                            <input
+                              type="radio"
+                              id={e1.txt}
+                              name="MySidebar"
+                              className="hidden"
+                              checked={
+                                i == selectedLink.bar && i1 == selectedLink.link
+                              }
+                              onChange={() => {}}
                             />
-                            <span>{e1.txt}</span>
+                            <label
+                              htmlFor={e1.txt}
+                              onClick={() => {
+                                setSelectedLink({ bar: i, link: i1 });
+                              }}
+                            >
+                              <FontAwesomeIcon
+                                icon={e1.img}
+                                className="h-[1rem] w-[1rem]"
+                              />
+                              <span>{e1.txt}</span>
+                            </label>
                           </li>
                         );
                       })}
