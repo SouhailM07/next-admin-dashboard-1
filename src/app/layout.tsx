@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 // components
-import { MySidebar, Navbar } from "@/components";
+import { MySidebar, Navbar, SettingsBtn } from "@/components";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <MySidebar />
+        <SettingsBtn />
         <main className="w-full">
           <Navbar />
           {children}
