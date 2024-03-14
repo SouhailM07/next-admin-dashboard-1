@@ -1,5 +1,7 @@
 "use client";
 import "./mysidebar.css";
+// next
+import Link from "next/link";
 // zustand
 import toggleStore from "@/zustand/toggleStore";
 import themeStore from "@/zustand/themeStore";
@@ -68,11 +70,13 @@ export default function MySidebar() {
                                 setSelectedLink({ bar: i, link: i1 });
                               }}
                             >
-                              <FontAwesomeIcon
-                                icon={e1.img}
-                                className="h-[1rem] w-[1rem]"
-                              />
-                              <span>{e1.txt}</span>
+                              <Link href={e1.link!} className=" w-full h-full">
+                                <FontAwesomeIcon
+                                  icon={e1.img}
+                                  className="h-[1rem] w-[1rem]"
+                                />
+                                <span>{e1.txt}</span>
+                              </Link>
                             </label>
                           </li>
                         );

@@ -22,12 +22,12 @@ import {
 export const arrOfSidebarLinks: sidebarLinks[] = [
   {
     title: "dashboard",
-    links: [{ img: faBagShopping, txt: "Ecommerce", link: "" }],
+    links: [{ img: faBagShopping, txt: "Ecommerce", link: "/" }],
   },
   {
     title: "pages",
     links: [
-      { img: faCartShopping, txt: "Orders", link: "" },
+      { img: faCartShopping, txt: "Orders", link: "orders" },
       { img: faUserGroup, txt: "Employees", link: "" },
       { img: faUsers, txt: "Customers", link: "" },
     ],
