@@ -1,4 +1,24 @@
+"use client";
 import "./editor.css";
+// syncfusion
+import {
+  HtmlEditor,
+  Image,
+  Inject,
+  Link,
+  QuickToolbar,
+  RichTextEditorComponent,
+  Toolbar,
+} from "@syncfusion/ej2-react-richtexteditor";
+
 export default function Editor() {
-  return <>Editor</>;
+  return (
+    <>
+      <main className="px-[2rem]">
+        <RichTextEditorComponent>
+          <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
+        </RichTextEditorComponent>
+      </main>
+    </>
+  );
 }

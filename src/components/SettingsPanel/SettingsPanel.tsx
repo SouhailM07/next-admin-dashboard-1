@@ -47,7 +47,7 @@ export default function SettingsPanel() {
           <SettingsBtn />
         </SheetTrigger>
         {/* @ts-ignore */}
-        <SheetContent className="w-[20rem]  ">
+        <SheetContent className="w-[20rem] max-md:w-full">
           <SheetHeader>
             <SheetTitle>Settings?</SheetTitle>
             <SheetDescription>

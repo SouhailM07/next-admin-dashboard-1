@@ -7,7 +7,7 @@ nav .faIcon {
   @apply h-[1.1rem] w-[1.1rem] cursor-pointer;
 }
 body {
-  @apply flex min-h-screen bg-mainPages;
+  @apply flex min-h-screen bg-mainPages dark:bg-slate-900;
 }
 /* Custom */
 /* ej2 */
