@@ -36,7 +36,7 @@ export default function MySidebar() {
                 onClick={handleToggle}
               />
             </article>
-            <article className="space-y-[1rem] text-[0.9rem]">
+            <article className="space-y-[1rem] text-[0.9rem] ">
               {arrOfSidebarLinks.map((e, i) => {
                 return (
                   <section key={i}>

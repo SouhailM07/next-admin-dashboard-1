@@ -4,7 +4,7 @@
 
 #MySidebar {
   @apply pl-[1.5rem]  max-h-screen w-[16rem] lg:w-[20rem]  drop-shadow-xl  max-lg:fixed z-[10] top-0 sticky;
-  @apply bg-white dark:bg-slate-900 dark:text-white;
+  @apply bg-white dark:bg-slate-900 dark:!text-white;
 }
 
 #MySidebar section,
