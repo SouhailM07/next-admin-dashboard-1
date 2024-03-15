@@ -32,7 +32,7 @@ export default function MySidebar() {
               <FontAwesomeIcon
                 icon={faCircleXmark}
                 role="button"
-                className="text-primaryCyan lg:hidden "
+                className="text-primaryCyan lg:hidden h-[1rem] w-[1rem]"
                 onClick={handleToggle}
               />
             </article>
