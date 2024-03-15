@@ -9,7 +9,7 @@ const change = (args: any) => {
 export default function ColorPicker() {
   return (
     <>
-      <main>
+      <main className="text-center">
         <article id="preview" />
         <article className="flex justify-center items-center gap-20 flex-wrap">
           <section>
@@ -17,10 +17,11 @@ export default function ColorPicker() {
             <ColorPickerComponent
               id="inline-pallete"
               // @ts-ignore
-              mode="Pallete"
+              mode="Palette"
               modeSwitcher={false}
               inline
               showButtons={false}
+              change={change}
             />
           </section>
           <section>
@@ -32,6 +33,7 @@ export default function ColorPicker() {
               modeSwitcher={false}
               inline
               showButtons={false}
+              change={change}
             />
           </section>
         </article>

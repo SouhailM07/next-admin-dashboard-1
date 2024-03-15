@@ -40,8 +40,13 @@ export default function MySidebar() {
               {arrOfSidebarLinks.map((e, i) => {
                 return (
                   <section key={i}>
-                    <h1 className="text-sidebarTitles uppercase">{e.title}</h1>
-                    <ul role="list" className="text-sidebarLinks">
+                    <h1 className="text-sidebarTitles dark:text-white uppercase">
+                      {e.title}
+                    </h1>
+                    <ul
+                      role="list"
+                      className="text-sidebarLinks dark:text-white"
+                    >
                       {e.links.map((e1, i1) => {
                         return (
                           <li
