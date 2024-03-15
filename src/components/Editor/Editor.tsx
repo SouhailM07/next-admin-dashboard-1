@@ -14,7 +14,7 @@ import {
 export default function Editor() {
   return (
     <>
-      <main className="px-[2rem]">
+      <main className="lg:px-[2rem]">
         <RichTextEditorComponent>
           <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
         </RichTextEditorComponent>
