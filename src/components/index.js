@@ -8,3 +8,4 @@ export { default as Orders } from "./Orders/Orders";
 export { default as Header } from "./Header/Header";
 export { default as Calendar } from "./Calendar/Calendar";
 export { default as Editor } from "./Editor/Editor";
+export { default as ColorPicker } from "./ColorPicker/ColorPicker";
